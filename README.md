@@ -17,26 +17,34 @@ Adds four new fields to the `Post` type within the WPGraphQL schema:
 Example query:
 
 ```graphql
-query GetPostBySlug($id: ID!) {
+query GetPostBySlug ($id: ID!) {
   post(id: $id, idType: SLUG) {
     id
     title
     content
+    excerpt
     slug
+    date
+    author {
+      node {
+        name
+      }
+    }
+    featuredImage {
+      node {
+        altText
+        description
+        caption
+        id
+        sourceUrl
+      }
+    }
     previousPost {
-      id
+      title
       slug
     }
     nextPost {
-      id
-      slug
-    }
-    previousPostInCategory {
-      id
-      slug
-    }
-    nextPostInCategory {
-      id
+      title
       slug
     }
   }
