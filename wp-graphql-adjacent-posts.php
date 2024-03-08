@@ -4,6 +4,7 @@
  * Description: Extends the WPGraphQL plugin to add fields for adjacent posts.
  * Version: 0.1
  * Author: scossar
+ * Plugin URI: https://github.com/scossar/wp-graphql-adjacent-posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
